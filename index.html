@@ -1,6 +1,7 @@
 <!--
   Name: Amina Sherif Khattab
   Student ID: 225104336
+  FT-WEB-101 - Task 1 - Profile page
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -13,52 +14,126 @@
 <body>
 
   <header>
-    <h1>Amina Sherif Khattab</h1>
+    <div class="intro">
+      <div class="intro-text">
+        <h1>Amina Sherif Khattab</h1>
+        <p class="role">Computer Science Student &amp; Aspiring DevOps Engineer</p>
+        <div class="info">
+          <span class="info-label">Student ID</span>
+          <span>225104336</span>
+          <span class="info-label">Course</span>
+          <span>FT-WEB-101 &ndash; Field Training I</span>
+          <span class="info-label">Assignment</span>
+          <span>Task 1 &ndash; Profile page</span>
+        </div>
+      </div>
+      <img class="photo" src="images/me.jpg" alt="Photo of Amina Sherif Khattab">
+    </div>
+
     <nav class="bar">
       <span class="bar-name">Amina Sherif Khattab</span>
-      <ul class="bar-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="https://github.com/amina-khattab">GitHub</a></li>
-      </ul>
+      <div class="bar-links">
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="https://github.com/amina-khattab">GitHub</a>
+      </div>
     </nav>
   </header>
 
   <main>
-    <section id="about">
-      <img class="photo" src="images/me.jpg" alt="Portrait photo of Amina Sherif Khattab">
 
-      <div class="cards">
-        <article class="card">
-          <h2>Skills</h2>
-          <p>HTML, CSS, and JavaScript basics.</p>
+    <section id="about" class="about">
+      <h2>About me</h2>
+      <p>
+        I am a computer science student who likes to understand how things work
+        and then build them myself. This page is my task for Field Training I.
+        It uses only HTML, CSS, and JavaScript, and I am using it to practice
+        layout and clean code.
+      </p>
+    </section>
+
+    <section class="cards">
+      <article class="card">
+        <h2>Education</h2>
+        <p>Computer Science student at New Mansoura University.</p>
+      </article>
+      <article class="card">
+        <h2>Hobbies</h2>
+        <p>Traveling, photography, and reading.</p>
+      </article>
+      <article class="card">
+        <h2>Goals</h2>
+        <p>To become a skilled Cloud DevOps Engineer.</p>
+      </article>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">Skills</h2>
+      <div class="rings">
+        <div class="ring-item">
+          <div class="ring p100"><span>100%</span></div>
+          <p>Structured Programming</p>
+        </div>
+        <div class="ring-item">
+          <div class="ring p90"><span>90%</span></div>
+          <p>OOP</p>
+        </div>
+        <div class="ring-item">
+          <div class="ring p80"><span>80%</span></div>
+          <p>Data Structures</p>
+        </div>
+        <div class="ring-item">
+          <div class="ring p70"><span>70%</span></div>
+          <p>Problem Solving</p>
+        </div>
+        <div class="ring-item">
+          <div class="ring p30"><span>30%</span></div>
+          <p>Algorithms</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects">
+        <article class="project">
+          <h3>Profile Page</h3>
+          <p>This page. Built with HTML, CSS, and JavaScript, with a dark mode button.</p>
         </article>
-        <article class="card">
-          <h2>Hobbies</h2>
-          <p>Reading, gaming, and football.</p>
-        </article>
-        <article class="card">
-          <h2>Goals</h2>
-          <p>Become a good web developer.</p>
+        <article class="project">
+          <h3>Coming soon</h3>
+          <p>More projects will be added here as I learn and build.</p>
         </article>
       </div>
     </section>
 
+    <section id="rate">
+      <h2 class="section-title">Rate this page</h2>
+      <div class="stars" id="stars">
+        <span class="star" data-value="1">&#9733;</span>
+        <span class="star" data-value="2">&#9733;</span>
+        <span class="star" data-value="3">&#9733;</span>
+        <span class="star" data-value="4">&#9733;</span>
+        <span class="star" data-value="5">&#9733;</span>
+      </div>
+      <p id="rating-text">Click a star to rate.</p>
+    </section>
+
     <section id="contact">
-      <h2>Leave your details</h2>
-      <form action="#" method="get">
-        <div class="field">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name">
-        </div>
-        <div class="field">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email">
-        </div>
+      <h2 class="section-title">Contact</h2>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <p id="hello"></p>
       </form>
     </section>
 
-    <button id="theme-toggle" type="button">Switch light / dark</button>
+    <button id="theme-btn" type="button">Switch light / dark</button>
+
   </main>
 
   <footer>
